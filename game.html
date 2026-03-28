@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catch the Box</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #111;
+            color: white;
+        }
+
+        #game {
+            width: 400px;
+            height: 400px;
+            background: #222;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #box {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Catch the Box 🎯</h1>
+<p>Score: <span id="score">0</span></p>
+
+<div id="game">
+    <div id="box"></div>
+</div>
+
+<script>
+let score = 0;
+let box = document.getElementById("box");
+let game = document.getElementById("game");
+
+function moveBox() {
+    let x = Math.random() * 350;
+    let y = Math.random() * 350;
+
+    box.style.left = x + "px";
+    box.style.top = y + "px";
+}
+
+box.onclick = function() {
+    score++;
+    document.getElementById("score").innerText = score;
+    moveBox();
+}
+
+setInterval(moveBox, 1000);
+</script>
+
+</body>
+</html>
