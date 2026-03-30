@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My site</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <p>I study</p>
+</body>
+
+</html>
+  
+
+  
